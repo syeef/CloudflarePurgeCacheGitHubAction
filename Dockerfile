@@ -5,8 +5,7 @@ LABEL "com.github.actions.description"="Purge the cache of an entire Zone or spe
 LABEL "com.github.actions.icon"="cloud"
 LABEL "com.github.actions.color"="orange"
 
-RUN apk update && apk add openssl curl
+RUN apk update && apk add --no-cache bash openssl curl
 
-ADD entrypoint.sh /entrypoint.sh
-
+COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
