@@ -9,7 +9,7 @@ if [-z "$CLOUDFLARE_AUTH_KEY" ]; then
 fi
 
 #Check if Zone ID is supplied
-if [-z "c" ]; then
+if [-z "$CLOUDFLARE_ZONE_ID" ]; then
     echo "❌ Cloudflare Zone ID is required to proceed."
     exit 1
 fi
